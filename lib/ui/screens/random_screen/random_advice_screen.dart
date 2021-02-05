@@ -1,4 +1,3 @@
-import 'package:advice_app/ui/screens/history/history.dart';
 import 'package:advice_app/ui/screens/random_screen/random_Screen_view_model.dart';
 import 'package:flutter/material.dart';
 import 'package:stacked/stacked.dart';
@@ -41,23 +40,17 @@ class RandomAdviceScreen extends StatelessWidget {
                     Padding(
                       padding: const EdgeInsets.all(8.0),
                       child: FlatButton(
-                        color: Colors.redAccent,
-                        child: Padding(
-                          padding: const EdgeInsets.all(15.0),
-                          child: Text(
-                            'History',
-                            style: TextStyle(
-                                fontSize: 25.0, fontWeight: FontWeight.w600),
+                          color: Colors.redAccent,
+                          child: Padding(
+                            padding: const EdgeInsets.all(15.0),
+                            child: Text(
+                              'History',
+                              style: TextStyle(
+                                  fontSize: 25.0, fontWeight: FontWeight.w600),
+                            ),
                           ),
-                        ),
-                        onPressed: () => Navigator.push(
-                          context,
-                          MaterialPageRoute(
-                              builder: (context) => HistoryScreen(
-                                    history: model.advice,
-                                  )),
-                        ),
-                      ),
+                          onPressed: () =>
+                              model.navigateToHistory(model.advice)),
                     ),
                     Padding(
                       padding: const EdgeInsets.all(8.0),
