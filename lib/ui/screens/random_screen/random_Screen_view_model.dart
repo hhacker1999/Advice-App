@@ -1,6 +1,6 @@
+import 'package:advice_app/app/auto_router.gr.dart';
 import 'package:advice_app/app/locator.dart';
 import 'package:advice_app/services/random_service.dart';
-import 'package:advice_app/ui/screens/history/history.dart';
 
 import 'package:stacked/stacked.dart';
 import 'package:stacked_services/stacked_services.dart';
@@ -23,6 +23,7 @@ class RandomScreenViewModel extends BaseViewModel {
   }
 
   void navigateToHistory(List<String> list) {
-    _navigationService.navigateToView(HistoryScreen(history: list));
+    _navigationService.navigateTo('/history-screen',
+        arguments: HistoryScreenArguments(history: list));
   }
 }
