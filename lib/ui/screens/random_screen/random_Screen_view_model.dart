@@ -22,8 +22,8 @@ class RandomScreenViewModel extends BaseViewModel {
     setBusy(false);
   }
 
-  void navigateToHistory(List<String> list) {
+  void navigateToHistory() {
     _navigationService.navigateTo('/history-screen',
-        arguments: HistoryScreenArguments(history: list));
+        arguments: HistoryScreenArguments(history: _advice));
   }
 }
