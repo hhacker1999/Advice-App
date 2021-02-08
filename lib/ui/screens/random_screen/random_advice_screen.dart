@@ -1,3 +1,4 @@
+import 'package:advice_app/naviagtion.dart';
 import 'package:advice_app/ui/screens/random_screen/random_Screen_view_model.dart';
 import 'package:flutter/material.dart';
 import 'package:stacked/stacked.dart';
@@ -91,7 +92,10 @@ class HistoryButton extends ViewModelWidget<RandomScreenViewModel> {
               style: TextStyle(fontSize: 25.0, fontWeight: FontWeight.w600),
             ),
           ),
-          onPressed: () => model.navigateToHistory()),
+          onPressed: () {
+            NavigateToHistory(model.advice)..dispatch(context);
+            // model.navigateToHistory();
+          }),
     );
   }
 }

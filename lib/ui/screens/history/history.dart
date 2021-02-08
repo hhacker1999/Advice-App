@@ -31,7 +31,7 @@ class HistoryScreen extends StatelessWidget {
                       return Card(
                         elevation: 0,
                         child: Text(
-                          List.from(history.reversed)[index],
+                          history[index],
                           style: TextStyle(fontSize: 20.0),
                         ),
                       );
